@@ -1,0 +1,44 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+        {% for product in products %}
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{{product.imageURL}}">
+            <div class="box-element product">
+                <h6><strong>{{product.name}}</strong></h6>
+                <hr>
+                <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+                
+                
+                {% if product.name == "Digital Product Example" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/space.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Volcano" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/volcano.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Mushroom" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/mushroom.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Basic" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/basic.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Wooden" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/wood.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Flame Shooting" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/flame.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Water" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/water.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Pure Enrichment" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/pure_enrichment.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Pear" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/pear.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Cool" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/cool.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Moon Lamp" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/moon_lamp.png' %}">View</a>
+                {% elif product.name == "Air Humidifier Light" %}
+                    <a class="btn btn-outline-success" href="{% static '/images/light.png' %}">View</a>
+                {% endif %}
+                <h4 style="display:inline-block;float:right;">${{product.price|floatformat:2}}</h4>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

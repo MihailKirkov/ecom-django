@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="icon" href="images/favicon.ico">
+    <title>Ecom</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="about container animation1">
+        <h1><strong>About</strong></h1>
+        <h5>A fully functional ecommerce website built with Django. The website has a login/register/logout system, as well as paypal/card payment and a cart system that is saved even for not logged in users after closing the page.</h5>
+        <h3>Techs Used:</h3>
+        <h5>HTML, CSS, JavaScript, Bootstrap, Python, Django, Paypal REST API</h5>
+    </div>
+
+    <div class = "store animation2">
+        <a href="store/" style="text-decoration: none;"><h1>STORE</h1></a>
+    </div>
+
+    <div class = "user container">
+        <h4>Test Account</h4>
+        <h6>username: demo</h6>
+        <h6>password: passdemo</h6>
+    </div>
+</body>
+</html>
